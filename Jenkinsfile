@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git credentialsId: 'github-token', url: 'https://github.com/versatile-life/jenkins-demo.git'
+                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/versatile-life/jenkins-demo.git'
             }
         }
         stage('Build') {
